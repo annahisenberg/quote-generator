@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let response;
     let newQuote;
-    let colors = ["#3f89ff", "#1850ab", "#188fab", "#f1af14", "#c73fff", "#ff3f98", "#3fff68", "#423fff", "#de8a71", "#dedb71", "#71b6deab", "#a571deab", "#de7171ab", "#920022ab", "#920022", "#009277", "#5a0092"];
+    let colors = ["#3f89ff", "#1850ab", "#188fab", "#f1af14", "#c73fff", "#ff3f98", "#3fff68", "#423fff", "#de8a71", "#dedb71", "#71b6deab", "#a571deab", "#de7171ab", "#920022ab", "#920022", "#009277", "#5a0092", "#880087", "#c39400", "#00c313"];
     let randomColor;
 
     function apiRequest() {
@@ -18,8 +18,8 @@ $(document).ready(function () {
     }
 
     function renderResults() {
-        $('#quotes').empty();
-        $('#quotes').append(`<p class="quote-block">${newQuote}</p> <p class="author">- ${response.author}</p> <button class="new">New Quote</button>`);
+        $('#loaded-quote').empty();
+        $('#loaded-quote').append(`<p class="quote-block">${newQuote}</p> <p class="author">- ${response.author}</p>`);
     }
 
     function handleButton() {
